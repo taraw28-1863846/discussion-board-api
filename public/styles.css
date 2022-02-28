@@ -1,0 +1,140 @@
+/*
+  Tara Wueger
+  05/21/2020
+  Section AJ: Wilson Tang and Wenxuan Liu
+
+  This is the styles.css page for my fourth creative project (index.html). It has some basic style
+  to help with the layout of the page as well as some style to make it look like a real bulletin
+  board. It also has classes that are utilized by the index.js page.
+*/
+
+body {
+  background-image: url('corkboard.jpg');
+  border: 30px ridge rgb(94, 52, 32);
+  margin: 0px;
+}
+
+.pushpin {
+  height: 10px;
+  align-items: flex-end;
+}
+
+.pushpin img {
+  height: 30px;
+  flex-grow: 1;
+}
+
+.pushpin, #post-form, h2, #posts > section, h3, .comments h4, .comments form, #error, #authors {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pushpin, .pushpin img {
+  width: 30px;
+}
+
+.pushpin, #posts, .post div, .comments {
+  display: flex;
+}
+
+h1, #post-form, #posts, .comments h4, .comments form, #authors {
+  text-align: center;
+}
+
+h1 span, h2 span, .comments > section {
+  padding: 5px;
+}
+
+h1 span, h2 span, #post-form, #posts > section, #authors {
+  background-color: white;
+}
+
+#post-form, #authors {
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+#post-form, #posts > section, #authors {
+  border: 4px solid black;
+}
+
+#post-form, #posts {
+  padding-bottom: 10px;
+}
+
+ul {
+  text-align: left;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+ul li {
+  flex: 1 0 25%;
+}
+
+#posts, .comments {
+  flex-direction: column;
+}
+
+#posts h2 {
+  width: 40%;
+}
+
+.post {
+  width: 60%;
+  margin: 10px;
+  border-bottom: 2px solid black;
+}
+
+.post div {
+  justify-content: space-around;
+}
+
+.post div > :first-child, .comments > section > :first-child {
+  font-weight: bold;
+}
+
+.post h3 {
+  width: 50%;
+}
+
+.post h3, .comments h4 {
+  border-bottom: 1px solid black;
+}
+
+.comments {
+  text-align: left;
+  width: 100%;
+}
+
+.comments h4 {
+  width: 20%;
+  padding-bottom: 5px;
+}
+
+.comments > section {
+  margin: 5px;
+  margin-left: 15px;
+}
+
+.comments > section, .comments form {
+  width: 70%;
+}
+
+.comments form {
+  margin-bottom: 10px;
+  border: 1px dashed gray;
+  padding: 10px;
+}
+
+#error {
+  background-color: gray;
+  border: 5px solid red;
+  width: 75%;
+  padding: 9px;
+  margin-top: 9px;
+}
+
+.hidden {
+  display: none;
+}

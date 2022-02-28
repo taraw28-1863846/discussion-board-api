@@ -1,0 +1,71 @@
+<!--
+  ***
+  Tara Wueger
+  05/21/2020
+  Section AJ: Wilson Tang and Wenxuan Liu
+
+  This is the index.html page for my fourth creative project. This HTML page is for creating
+  discussion board posts and leaving comments on existing posts.
+  ***
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
+    <title>CSE 154 Discussion Board</title>
+  </head>
+  <body>
+    <section id="error" class="hidden">
+      <p>There was an error requesting a post or comment from the Discussion Board API.</p>
+      <p>Possible Errors:</p>
+      <ul>
+        <li>the post is missing an entry</li>
+        <li>the comment is blank</li>
+        <li>there are too many posts or comments for the server to handle</li>
+      </ul>
+    </section>
+    <h1><span>CSE 154 Discussion Board</span></h1>
+    <form id="post-form">
+      <div class="pushpin">
+        <img src="pushpin.png" alt="pushpin">
+      </div>
+      <h2>Create a New Post!</h2>
+      <label for="title">Title (optional):</label>
+      <input type="text" id="title" name="title">
+      <br>
+      <label for="author">Author (optional - if left blank, submitted as Anonymous):</label>
+      <input type="text" id="author" name="author">
+      <br>
+      <label for="entry">Entry:</label>
+      <br>
+      <textarea id="entry" name="entry" minlength="10" rows="5" cols="40" required></textarea>
+      <br>
+      <button id="add-entry">Add Entry!</button>
+    </form>
+    <section id="authors">
+      <h2><span>Authors</span></h2>
+      <p>Here is a list of all the users we've had since your last visit! If you just made a post,
+        refresh the page to see your name.</p>
+      <ul>
+      </ul>
+    </section>
+    <section id="posts">
+      <h2><span>Discussion Board</span></h2>
+      <section id="intro-post" class="post">
+        <div class="pushpin">
+          <img src="pushpin.png" alt="pushpin">
+        </div>
+        <div>
+          <p>05-21-2020 4:59 PM (PST)</p>
+          <p>Admin</p>
+        </div>
+        <h3>Introductory Post</h3>
+        <p>Welcome to this CSE 154 discussion board! Feel free to add a new post or leave a
+          comment.</p>
+      </section>
+    </section>
+  </body>
+</html>
